@@ -9,6 +9,8 @@ import CitySelector from './widgets/citySelector';
 import dataProvider from './dataProvider';
 //import './main.css';
 
+// test comment
+
 function renderAppInterface() {
   const header = document.createElement('h1');
   header.innerText = i18n.t('title');
