@@ -2,5 +2,6 @@
   "title": "City population by time",
   "loading": "Loading",
   "loaded": "Loaded",
-  "population": "Population"
+  "population": "Population",
+  "projected": "Projected"
 }

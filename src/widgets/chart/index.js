@@ -39,7 +39,7 @@ export default function Chart() {
                 data: getPopulation(data),
               },
               {
-                name: 'Projected',
+                name: i18n.t('projected'),
                 // data: getEstimatedPopulation(data),
               },
             ],

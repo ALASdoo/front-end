@@ -2,5 +2,6 @@
   "title": "A város lakossága évek szerint",
   "loading": "Betöltés",
   "loaded": "Adatok készen",
-  "population": "Lakosság száma"
+  "population": "Lakosság száma",
+  "projected": "Vetített"
 }
