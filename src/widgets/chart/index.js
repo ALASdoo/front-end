@@ -12,6 +12,11 @@ const getPopulation = flow(
   lmap(({ year, population }) => [year, population])
 );
 
+const getEstimatedPopulation = flow(
+  reject(flow(get('projected'), isNil)),
+  lmap(({ year, projected }) => [year, projected])
+);
+
 export default function Chart() {
   const [loading, setLoading] = React.useState();
   const [chartOptions, setChartOptions] = React.useState();
@@ -39,7 +44,7 @@ export default function Chart() {
               },
               {
                 name: i18n.t('projected'),
-                // data: getEstimatedPopulation(data),
+                data: getEstimatedPopulation(data),
               },
             ],
           };
@@ -59,5 +64,5 @@ export default function Chart() {
 }
 
 export const __test__ = {
-  getPopulation,
+  getPopulation, getEstimatedPopulation
 };
