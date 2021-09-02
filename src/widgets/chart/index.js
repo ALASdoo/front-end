@@ -7,12 +7,6 @@ import { flow, map as lmap, reject, get, isNil } from 'lodash/fp';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 
-const baseOptions = {
-  title: {
-    text: i18n.t('population'),
-  },
-};
-
 const getPopulation = flow(
   reject(flow(get('population'), isNil)),
   lmap(({ year, population }) => [year, population])
@@ -21,6 +15,11 @@ const getPopulation = flow(
 export default function Chart() {
   const [loading, setLoading] = React.useState();
   const [chartOptions, setChartOptions] = React.useState();
+  const baseOptions = {
+    title: {
+      text: i18n.t('population'),
+    },
+  };
 
   useEffect(() => {
     const subscription = dataProvider.loadingStream.subscribe(setLoading);
