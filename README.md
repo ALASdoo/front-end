@@ -14,7 +14,7 @@ Make sure You have nvm installed and run `nvm use` to have the correct node/npm 
 ### i18n
 
 - [x] Rename the `Title` to `City population by time`
-- [ ] Add a new local (sr-RS)
+- [x] Add a new local (sr-RS)
 - [ ] Chart legend contains string `Projected` which is not translated. Add it to translations.
 
 ### Webpack

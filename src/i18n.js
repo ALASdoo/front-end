@@ -2,6 +2,7 @@ import i18next from 'i18next';
 
 import enTranslation from './locales/en-US.json';
 import huTranslation from './locales/hu-HU.json';
+import srTranslation from './locales/sr-RS.json';
 
 i18next
   .init({
@@ -11,6 +12,9 @@ i18next
     resources: {
       'en-US': {
         translation: enTranslation,
+      },
+      'sr-RS': {
+        translation: srTranslation,
       },
     },
   })
