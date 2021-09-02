@@ -7,9 +7,7 @@ import Chart from './widgets/chart';
 import CitySelector from './widgets/citySelector';
 // import ComparePopulation from './widgets/comparePopulation';
 import dataProvider from './dataProvider';
-//import './main.css';
-
-// test comment
+import './main.css';
 
 function renderAppInterface() {
   const header = document.createElement('h1');

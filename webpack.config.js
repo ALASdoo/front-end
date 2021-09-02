@@ -32,6 +32,10 @@ module.exports = {
           // preview: 100,
         },
       },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
     ],
   },
   plugins: [

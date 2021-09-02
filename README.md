@@ -19,8 +19,8 @@ Make sure You have nvm installed and run `nvm use` to have the correct node/npm 
 
 ### Webpack
 
-- [ ] Configure webpack to be able loading css files
-- [ ] Load main.css to the App (`import "main.css";` in `src/index.js`)
+- [x] Configure webpack to be able loading css files
+- [x] Load main.css to the App (`import "main.css";` in `src/index.js`)
 
 ### React
 
