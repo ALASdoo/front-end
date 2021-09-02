@@ -24,7 +24,7 @@ Make sure You have nvm installed and run `nvm use` to have the correct node/npm 
 
 ### React
 
-- [ ] Show loading spinner while data is loading (hint: `<div class="lds-hourglass"></div>`)
+- [x] Show loading spinner while data is loading (hint: `<div class="lds-hourglass"></div>`)
 - [ ] In chart, show projected population in a different line. Test the function which extracts the data.
 - [ ] Cities are hardcoded in `citySelector`. Load them dynamically.
 - [ ] Istanbul is hardcoded for the default selected city. Initially show a message that User has to select a city.

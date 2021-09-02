@@ -52,6 +52,7 @@ export default function Chart() {
   return (
     <div>
       <div>{loading ? i18n.t('loading') : i18n.t('loaded')}</div>
+      {loading && <div className="lds-hourglass"></div>}
       {!loading && <HighchartsReact highcharts={Highcharts} options={chartOptions} />}
     </div>
   );
