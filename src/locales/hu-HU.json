@@ -4,5 +4,7 @@
   "loaded": "Adatok készen",
   "population": "Lakosság száma",
   "projected": "Vetített",
-  "selectCity": "Válasszon várost!"
+  "selectCity": "Válasszon várost!",
+  "subtitle": "Városok összehasonlítása",
+  "compareTitle": "{{city1}} és {{city2}} lakosságának összehasonlítása"
 }

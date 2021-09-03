@@ -6,6 +6,7 @@ const loading = new BehaviorSubject(true);
 const data = new BehaviorSubject([]);
 const selectedCity = new BehaviorSubject('');
 const cities = new BehaviorSubject([]);
+const comparisonCity = new BehaviorSubject('');
 
 (async function init() {
   setTimeout(() => {
@@ -24,6 +25,16 @@ const populationForSelectedCity = combineLatest([
   })
 );
 
+const populationForCityComparison = combineLatest([
+  data.pipe(filter(negate(isUndefined))),
+  selectedCity,
+  comparisonCity
+]).pipe(
+  map(([data, selectedCity, comparisonCity]) => {
+    return data.filter(({ city }) => (city === comparisonCity) || (city === selectedCity));
+  })
+);
+
 const getCities = function(){
   data.subscribe(readCSV => {
     cities.next(Array.from(new Set(readCSV.map(line => line.city))));
@@ -35,5 +46,7 @@ export default {
   dataStream: data,
   selectedCityStream: selectedCity,
   populationForSelectedCity,
-  citiesStream: cities
+  citiesStream: cities,
+  comparisonCityStream: comparisonCity,
+  populationForCityComparison
 };

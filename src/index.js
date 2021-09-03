@@ -5,13 +5,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Chart from './widgets/chart';
 import CitySelector from './widgets/citySelector';
-// import ComparePopulation from './widgets/comparePopulation';
+import ComparePopulation from './widgets/comparePopulation';
 import dataProvider from './dataProvider';
 import './main.css';
 
 
-function handleSelection(event) {
-  dataProvider.selectedCityStream.next(event.target.value);
+function handleSelection(event, stream) {
+  stream.next(event.target.value);
   renderAppInterface();
 }
 
@@ -20,19 +20,30 @@ function renderAppInterface() {
   header.innerText = i18n.t('title');
   const citySelector = document.createElement('div');
   const chartContainer = document.createElement('div');
+  const subtitle = document.createElement('h2');
+  subtitle.innerText = i18n.t('subtitle');
+  const comparisonCitySelector = document.createElement('div');
   const compare = document.createElement('div');
 
-  document.getElementById('app').replaceChildren(header, citySelector, chartContainer, compare);
+  document.getElementById('app').replaceChildren(header, citySelector, chartContainer, subtitle, comparisonCitySelector, compare);
 
   ReactDOM.render(
     <CitySelector
       city={dataProvider.selectedCityStream.getValue()}
-      handleSelection={(event) => {handleSelection(event);}}
+      handleSelection={(event) => {handleSelection(event, dataProvider.selectedCityStream);}}
     />,
     citySelector
   );
   ReactDOM.render(<Chart />, chartContainer);
-  // ReactDOM.render(<ComparePopulation />, compare);
+  ReactDOM.render(
+
+    <CitySelector
+      city={dataProvider.comparisonCityStream.getValue()}
+      handleSelection={(event) => {handleSelection(event, dataProvider.comparisonCityStream);}}
+    />,
+    comparisonCitySelector
+  );
+  ReactDOM.render(<ComparePopulation />, compare);
 }
 
 function renderRoot() {

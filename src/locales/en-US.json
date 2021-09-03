@@ -4,5 +4,7 @@
   "loaded": "Loaded",
   "population": "Population",
   "projected": "Projected",
-  "selectCity": "Select city"
+  "selectCity": "Select city",
+  "subtitle": "Compare cities",
+  "compareTitle": "Compare {{city1}} and {{city2}} population"
 }

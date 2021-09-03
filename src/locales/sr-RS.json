@@ -4,5 +4,7 @@
   "loaded": "Natovaren",
   "population": "Populacija",
   "projected": "Projektovan",
-  "selectCity": "Izaberite grad"
+  "selectCity": "Izaberite grad",
+  "subtitle": "Uporedite gradove",
+  "compareTitle": "Uporedite {{city1}} i {{city2}} populaciju"
 }
