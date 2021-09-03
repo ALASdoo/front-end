@@ -3,5 +3,6 @@
   "loading": "Betöltés",
   "loaded": "Adatok készen",
   "population": "Lakosság száma",
-  "projected": "Vetített"
+  "projected": "Vetített",
+  "selectCity": "Válasszon várost!"
 }

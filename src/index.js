@@ -9,6 +9,12 @@ import CitySelector from './widgets/citySelector';
 import dataProvider from './dataProvider';
 import './main.css';
 
+
+function handleSelection(event) {
+  dataProvider.selectedCityStream.next(event.target.value);
+  renderAppInterface();
+}
+
 function renderAppInterface() {
   const header = document.createElement('h1');
   header.innerText = i18n.t('title');
@@ -21,9 +27,7 @@ function renderAppInterface() {
   ReactDOM.render(
     <CitySelector
       city={dataProvider.selectedCityStream.getValue()}
-      handleSelection={(event) => {
-        dataProvider.selectedCityStream.next(event.target.value);
-      }}
+      handleSelection={(event) => {handleSelection(event);}}
     />,
     citySelector
   );

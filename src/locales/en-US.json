@@ -3,5 +3,6 @@
   "loading": "Loading",
   "loaded": "Loaded",
   "population": "Population",
-  "projected": "Projected"
+  "projected": "Projected",
+  "selectCity": "Select city"
 }

@@ -9,6 +9,16 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.select-city {
+  padding:  20px 0;
+}
+
+.select-city .warning{
+  font-size: 20px;
+  color: brown;
+  padding-bottom: 5px;
+}
+
 .lds-hourglass {
   display: inline-block;
   position: relative;
